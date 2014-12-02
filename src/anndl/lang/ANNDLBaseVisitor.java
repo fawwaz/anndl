@@ -1,5 +1,5 @@
 // Generated from ANNDL.g4 by ANTLR 4.4
-package ANNDL.anndl;
+package anndl.lang;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 

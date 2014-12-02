@@ -31,7 +31,7 @@ dataset :  (rowdata newline)+;
 rowdata : (INT ',')* INT;
 
 
-namafile : ID '.' (ID) {1};
+namafile : ID '.' (ID);
 real : '-'? (INT? '.')? INT;
 WS : [\r\t]+ -> skip;
 INT : [0-9]+;

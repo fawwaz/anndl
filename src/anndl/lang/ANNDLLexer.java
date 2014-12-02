@@ -1,5 +1,5 @@
 // Generated from ANNDL.g4 by ANTLR 4.4
-package ANNDL.anndl;
+package anndl.lang;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

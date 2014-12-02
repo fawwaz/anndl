@@ -1,1 +1,1 @@
-antlr -o src/anndl/lang -package ANNDL.anndl -no-listener -visitor ANNDL.g4
+antlr -o src/anndl/lang -package anndl.lang -no-listener -visitor ANNDL.g4
