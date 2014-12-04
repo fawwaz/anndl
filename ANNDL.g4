@@ -36,7 +36,7 @@ instruksi : 'klasifikasikan' 'data' 'ini' 'dengan' 'model' modelname=namafile 's
 
 namafile : ID '.' (ID);
 real : '-'? (INT? '.')? INT;
-WS : [\r\t]+ -> skip;
+WS : [ \r\t]+ -> skip;
 INT : [0-9]+;
 ID: [A-Za-z_]+[0-9A-Za-z_]*;
 newline : '\n'+;

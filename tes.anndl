@@ -2,7 +2,7 @@ buat ann multilayer
 namakan tesann
 struktur:
 learning rate = 0.2
-momemntum factor = 0.1
+momentum factor = 0.1
 aktivasi = sigmoid
 jumlah layer = 3
 jumlah neuron = {3, 4, 5}

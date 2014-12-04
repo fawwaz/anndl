@@ -44,8 +44,9 @@ public class Anndl {
         
         ModelVisitor visitor = new ModelVisitor();
         
-        ModelClassifier themodel = (ModelClassifier) visitor.visit(tree);
-        themodel.PrintInfo();
+        System.out.println(visitor.visit(tree));
+        //ModelClassifier themodel = (ModelClassifier) visitor.visit(tree);
+        //themodel.PrintInfo();
         System.out.println("");
                 
     }

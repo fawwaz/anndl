@@ -27,13 +27,13 @@ public class ModelVisitor extends ANNDLBaseVisitor<Object>{
     }
 
     @Override
-    public Object visitLearningrate(ANNDLParser.LearningrateContext ctx) {
+    public Double visitLearningrate(ANNDLParser.LearningrateContext ctx) {
         modelc.learningrate = Double.parseDouble(ctx.learnrate.getText());
         return Double.parseDouble(ctx.learnrate.getText());
     }
 
     @Override
-    public Object visitMomentum(ANNDLParser.MomentumContext ctx) {
+    public Double visitMomentum(ANNDLParser.MomentumContext ctx) {
         modelc.momentum = Double.parseDouble(ctx.momen.getText());
         return Double.parseDouble(ctx.momen.getText());
     }
