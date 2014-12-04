@@ -5,6 +5,8 @@
  */
 package anndl.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Asus
@@ -16,11 +18,16 @@ public class ModelClassifier{
     public double momentum;
     public int jumlahlayer;
     public String jumlahneuron;
+    public String hidden;
     public int epoch;
     public String filetraining;
-    
+    public ArrayList<Integer> the_neurons = new ArrayList<>();
     public String namafilemodel;
     
+    public void extracthidden(){
+        hidden = jumlahneuron.substring(1,jumlahneuron.length()-1);
+        
+    }
     
     
     public void PrintInfo(){
