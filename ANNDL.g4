@@ -14,21 +14,24 @@ struktur :  'struktur' ':' newline
 			momentum
 			aktivasi
 			jumlahlayer
-			jumlahneuron;
+			jumlahneuron
+                        epoch
+			trainingdata;
 
 learningrate : 'learning' 'rate' '=' learnrate=real newline;
-momentum : 'momemntum' 'factor' '=' momen=real newline;
+momentum : 'momentum' 'factor' '=' momen=real newline;
 aktivasi : 'aktivasi' '=' 'sigmoid' newline;
 jumlahlayer :'jumlah' 'layer' '=' totallayers=INT newline;
 jumlahneuron : 'jumlah' 'neuron' '=' totalneurons=neurons newline;
+epoch : 'jumlah' 'epoch' '=' epochs = INT newline;
+trainingdata : 'dengan' 'data' 'latih' 'bersumber' 'dari' 'file' trainingfile=namafile;
+
+
 
 neurons : '{' (INT ',' )* INT '}';
 
-instruksi : perintah dataset;
+instruksi : 'klasifikasikan' 'data' 'ini' 'dengan' 'model' modelname=namafile 'simpan' 'hasilnya' 'dalam' 'file' outputname=namafile;
 
-perintah : 'klasifikasikan' 'data' 'ini' 'dengan' 'model' modelname=namafile 'simpan' 'hasilnya' 'dalam' 'file' outputname=namafile newline;
-dataset :  (rowdata newline)+;
-rowdata : (INT ',')* INT;
 
 
 namafile : ID '.' (ID);

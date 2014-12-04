@@ -36,6 +36,18 @@ public interface ANNDLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLearningrate(@NotNull ANNDLParser.LearningrateContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ANNDLParser#trainingdata}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTrainingdata(@NotNull ANNDLParser.TrainingdataContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ANNDLParser#epoch}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEpoch(@NotNull ANNDLParser.EpochContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#momentum}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -66,12 +78,6 @@ public interface ANNDLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNewline(@NotNull ANNDLParser.NewlineContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#dataset}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDataset(@NotNull ANNDLParser.DatasetContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#jenis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -84,29 +90,17 @@ public interface ANNDLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitJumlahneuron(@NotNull ANNDLParser.JumlahneuronContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#perintah}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPerintah(@NotNull ANNDLParser.PerintahContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#jumlahlayer}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJumlahlayer(@NotNull ANNDLParser.JumlahlayerContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#instruksi}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitInstruksi(@NotNull ANNDLParser.InstruksiContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#rowdata}.
+	 * Visit a parse tree produced by {@link ANNDLParser#jumlahlayer}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRowdata(@NotNull ANNDLParser.RowdataContext ctx);
+	T visitJumlahlayer(@NotNull ANNDLParser.JumlahlayerContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#neurons}.
 	 * @param ctx the parse tree
