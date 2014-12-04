@@ -19,6 +19,10 @@ public class ModelClassifier{
     public int epoch;
     public String filetraining;
     
+    public String namafilemodel;
+    
+    
+    
     public void PrintInfo(){
         System.out.println("Model name: "+namamodel);
         System.out.println("Jenis \t: "+jenis);

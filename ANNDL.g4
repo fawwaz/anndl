@@ -1,8 +1,7 @@
 grammar ANNDL;
 
-model : deskripsi | instruksi;
+model : definisi struktur;
 
-deskripsi : definisi struktur;
 
 definisi : 'buat' 'ann' tipe=jenis newline
 			'namakan' nama=ID newline;
@@ -30,7 +29,6 @@ trainingdata : 'dengan' 'data' 'latih' 'bersumber' 'dari' 'file' trainingfile=na
 
 neurons : '{' (INT ',' )* INT '}';
 
-instruksi : 'klasifikasikan' 'data' 'ini' 'dengan' 'model' modelname=namafile 'simpan' 'hasilnya' 'dalam' 'file' outputname=namafile;
 
 
 

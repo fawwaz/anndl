@@ -54,12 +54,6 @@ public interface ANNDLVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMomentum(@NotNull ANNDLParser.MomentumContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#deskripsi}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDeskripsi(@NotNull ANNDLParser.DeskripsiContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#aktivasi}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -89,12 +83,6 @@ public interface ANNDLVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitJumlahneuron(@NotNull ANNDLParser.JumlahneuronContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link ANNDLParser#instruksi}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitInstruksi(@NotNull ANNDLParser.InstruksiContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link ANNDLParser#jumlahlayer}.
 	 * @param ctx the parse tree

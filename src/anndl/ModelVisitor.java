@@ -27,39 +27,45 @@ public class ModelVisitor extends ANNDLBaseVisitor<Object>{
     }
 
     @Override
-    public Double visitLearningrate(ANNDLParser.LearningrateContext ctx) {
+    public Object visitLearningrate(ANNDLParser.LearningrateContext ctx) {
         modelc.learningrate = Double.parseDouble(ctx.learnrate.getText());
-        return Double.parseDouble(ctx.learnrate.getText());
+        //return Double.parseDouble(ctx.learnrate.getText());
+        return modelc;
     }
 
     @Override
-    public Double visitMomentum(ANNDLParser.MomentumContext ctx) {
+    public Object visitMomentum(ANNDLParser.MomentumContext ctx) {
         modelc.momentum = Double.parseDouble(ctx.momen.getText());
-        return Double.parseDouble(ctx.momen.getText());
+        //return Double.parseDouble(ctx.momen.getText());
+        return modelc;
     }
 
     @Override
     public Object visitJumlahlayer(ANNDLParser.JumlahlayerContext ctx) {
         modelc.jumlahlayer = Integer.parseInt(ctx.totallayers.getText());
-        return Integer.parseInt(ctx.totallayers.getText()); //To change body of generated methods, choose Tools | Templates.
+        //return Integer.parseInt(ctx.totallayers.getText()); //To change body of generated methods, choose Tools | Templates.
+        return modelc;
     }
 
     @Override
     public Object visitJumlahneuron(ANNDLParser.JumlahneuronContext ctx) {
-       // modelc.jumlahneuron = ctx.totalneurons.getText();
-        return ctx.totalneurons.getText();
+        modelc.jumlahneuron = ctx.totalneurons.getText();
+        return modelc;
     }
 
     @Override
     public Object visitEpoch(ANNDLParser.EpochContext ctx) {
         modelc.epoch = Integer.parseInt(ctx.epochs.getText());
-        return Integer.parseInt(ctx.epochs.getText()); //To change body of generated methods, choose Tools | Templates.
+        //return Integer.parseInt(ctx.epochs.getText()); //To change body of generated methods, choose Tools | Templates.
+        return modelc;
     }
 
     @Override
     public Object visitTrainingdata(ANNDLParser.TrainingdataContext ctx) {
         modelc.filetraining = ctx.trainingfile.getText();
-        return ctx.trainingfile.getText(); //To change body of generated methods, choose Tools | Templates.
+        
+        //return ctx.trainingfile.getText(); //To change body of generated methods, choose Tools | Templates.
+        return modelc;
     }
     
     @Override
